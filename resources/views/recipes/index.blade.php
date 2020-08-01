@@ -8,6 +8,12 @@
             Recipe list
         </div>
 
+        @foreach($recipes as $recipe)
+        <div>
+            {{ $recipe->name }} - {{ $recipe->description }} - {{ $recipe->serves }}
+        </div>
+        @endforeach
+
 
 
 
