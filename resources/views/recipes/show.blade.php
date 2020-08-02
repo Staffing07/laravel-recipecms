@@ -2,15 +2,10 @@
 
 @section('content')
 
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        <div class="title m-b-md">
-            Recipe - {{ $id }}
-        </div>
-
-
-
-
-    </div>
+<div class="wrapper pizza-details">
+    <h1>Recipe {{ $recipe->name }}</h1>
+    <p class="lead">Description - {{ $recipe -> description}}</p>
+    <p>Serves {{ $recipe->serves }}</p>
 </div>
+<a href="/recipes" class="back">Back to recipes</a>
 @endsection

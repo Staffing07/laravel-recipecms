@@ -29,7 +29,10 @@ class RecipeController extends Controller
     public function show($id)
     {
         // use the $id variable to query the db for a record
-        return view('recipes.show', ['id' => $id]);
+        // return view('recipes.show', ['id' => $id]);
+        $recipe = Recipe::findorfail($id);
+
+        return view('recipes.show', ['recipe' => $recipe]);
     }
 
     public function create() {
