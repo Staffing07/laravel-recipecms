@@ -22,6 +22,7 @@
         <div class="title m-b-md">
             Recipe Book
         </div>
+        <a href="/recipes/create">Add a new recipe</a>
 
 
     </div>
