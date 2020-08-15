@@ -16,14 +16,14 @@ class CreateRecipesTable extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
             $table->string('course');
             $table->string('cuisine');
-            $table->string('name');
             $table->string('description');
             $table->string('serves');
             $table->string('preptime');
             $table->string('cookingtime');
-            $table->string('ingredients');
+            $table->json('ingredients');
             $table->string('method');
         });
     }

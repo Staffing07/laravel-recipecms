@@ -22,6 +22,7 @@
         <div class="title m-b-md">
             Recipe Book
         </div>
+        <p class="mssg">{{ session('mssg') }}</p>
         <a href="/recipes/create">Add a new recipe</a>
 
 

@@ -38,4 +38,39 @@ class RecipeController extends Controller
     public function create() {
         return view('recipes.create');
     }
+
+    public function store() {
+    // Check form is working by sending output to terminal in vs code
+        // error_log(request('name'));
+        // error_log(request('course'));
+        // error_log(request('cuisine'));
+        // error_log(request('description'));
+        // error_log(request('serves'));
+        // error_log(request('preptime'));
+        // error_log(request('cookingtime'));
+        // error_log(request('ingredients'));
+        // error_log(request('method'));
+
+        // create record and save to database by using variable to create a new code instance of the recipe model
+        $recipe = new Recipe();
+
+        $recipe->name = request('name');
+        $recipe->course = request('course');
+        $recipe->cuisine = request('cuisine');
+        $recipe->description = request('description');
+        $recipe->serves = request('serves');
+        $recipe->preptime = request('preptime');
+        $recipe->cookingtime = request('cookingtime');
+        $recipe->ingredients = request('ingredients');
+        $recipe->method = request('method');
+
+        // test by logging variable output to terminal
+        // error_log($recipe);
+
+        // if above works, log the object instead to the database
+        $recipe->save();
+
+
+        return redirect('/')->with('mssg', 'Successfully added recipe');
+    }
 }
