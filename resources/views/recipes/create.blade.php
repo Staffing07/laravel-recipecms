@@ -55,7 +55,7 @@
 
         <label for="method">Method</label>
         <input type="text" name="method" id="method">
-        <input type="submit" value="Add recipe">
+        <input type="submit" value="Add recipe" name="addrecipe">
     </form>
 </div>
 @endsection

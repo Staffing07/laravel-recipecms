@@ -23,6 +23,10 @@ Route::get('/recipes/create', 'RecipeController@create');
 
 Route::post('/recipes', 'RecipeController@store');
 
+Route::get('/recipes/addmeasurement', 'RecipeController@addmeasurement');
+
+// Route::post('/recipes', 'RecipeController@storemeasurement');
+
 Route::get('/recipes/{id}', 'RecipeController@show');
 
 

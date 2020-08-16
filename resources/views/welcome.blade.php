@@ -24,6 +24,7 @@
         </div>
         <p class="mssg">{{ session('mssg') }}</p>
         <a href="/recipes/create">Add a new recipe</a>
+        <a href="/recipes/addmeasurement">Add a new measurement</a>
 
 
     </div>
