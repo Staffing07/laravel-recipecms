@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Measurement;
 use Illuminate\Http\Request;
 // tell the controller to use the recipe model that will fetch db data
 use App\Recipe;
@@ -36,6 +37,7 @@ class RecipeController extends Controller
     }
 
     public function create() {
+        $measurements = Measurement::select('select *', [1]);
         return view('recipes.create');
     }
 

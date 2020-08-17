@@ -48,6 +48,13 @@
             <option value="tbsp">Tablespoon(s)</option>
         </select>
 
+        <select name="measurements" id="measurements">
+            @foreach ($measurements->units as $unit)
+        <option value="unit[]">{{ $unit }}</option>
+
+            @endforeach
+        </select>
+
         <fieldset>
             <label>Ingredients</label>
             <input type="checkbox" name="ingredients[]" value="mushrooms">Mushrooms<br />

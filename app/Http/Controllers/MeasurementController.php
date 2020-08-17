@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// tell the controller to use the recipe model that will fetch db data
+// tell the controller to use the measurement model that will fetch db data
 use App\Measurement;
 
 class MeasurementController extends Controller
@@ -30,9 +30,9 @@ class MeasurementController extends Controller
     {
         // use the $id variable to query the db for a record
         // return view('measurements.show', ['id' => $id]);
-        $recipe = Measurement::findorfail($id);
+        $measurement = Measurement::findorfail($id);
 
-        return view('measurements.show', ['recipe' => $recipe]);
+        return view('measurements.show', ['measurement' => $measurement]);
     }
 
     public function create() {
@@ -41,10 +41,10 @@ class MeasurementController extends Controller
 
     public function store(Request $request) {
 
-            $Measurement = new Measurement();
+            $measurement = new Measurement();
 
-            $Measurement->unit = request(('unitname'));
-            $Measurement->save();
+            $measurement->unit = request(('unitname'));
+            $measurement->save();
             return redirect('/')->with('mssg', 'Successfully added measurement');
         }
 
@@ -61,34 +61,18 @@ class MeasurementController extends Controller
         // error_log(request('ingredients'));
         // error_log(request('method'));
 
-        // create record and save to database by using variable to create a new code instance of the recipe model
+        // create record and save to database by using variable to create a new code instance of the measurement model
 
 
 
         // test by logging variable output to terminal
-        // error_log($recipe);
+        // error_log($measurement);
 
         // if above works, log the object instead to the database
-        // $recipe->save();
+        // $measurement->save();
 
 
-        // return redirect('/')->with('mssg', 'Successfully added recipe');
+        // return redirect('/')->with('mssg', 'Successfully added measurement');
 
-    public function addmeasurement() {
-        return view('measurements.addmeasurement');
-    }
 
-    public function storemeasurement() {
-        // Check form is working by sending output to terminal in vs code
-        // error_log(request('name'));
-        // error_log(request('course'));
-        // error_log(request('cuisine'));
-        // error_log(request('description'));
-        // error_log(request('serves'));
-        // error_log(request('preptime'));
-        // error_log(request('cookingtime'));
-        // error_log(request('ingredients'));
-        // error_log(request('method'));
-
-    }
 }
