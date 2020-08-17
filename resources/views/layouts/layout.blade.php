@@ -10,6 +10,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="/css/main.css" rel="stylesheet">
 </head>
@@ -20,6 +22,7 @@
     <footer>
         Copyright 2020 David Stafford
     </footer>
+    
 </body>
 
 </html>
