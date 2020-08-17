@@ -48,9 +48,9 @@
             <option value="tbsp">Tablespoon(s)</option>
         </select>
 
-        <select name="measurements" id="measurements">
-            @foreach ($measurements->units as $unit)
-        <option value="unit[]">{{ $unit }}</option>
+        <select name="measurements[]" id="measurements">
+            @foreach ($measurements as $measurement)
+        <option value="1">{{ $measurement }}</option>
 
             @endforeach
         </select>

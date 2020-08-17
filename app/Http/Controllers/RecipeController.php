@@ -37,8 +37,8 @@ class RecipeController extends Controller
     }
 
     public function create() {
-        $measurements = Measurement::select('select *', [1]);
-        return view('recipes.create');
+        $measurements = Measurement::pluck('unit');
+        return view('recipes.create')->with(['measurements' => $measurements]);
     }
 
     public function store(Request $request) {
