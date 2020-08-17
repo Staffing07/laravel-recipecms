@@ -37,6 +37,8 @@
         <label for="ingredientMeasure">Amount</label>
         <input type="number" name="ingredientMeasure" step="0.25">
         <label for="ingredientUnit">Unit</label>
+        <!-- TO DO -->
+        <!-- Pull this value from the measurements table -->
         <select name="ingredientUnit" id="ingredientUnit">
             <option value="ml">Ml</option>
             <option value="cup">Cup</option>

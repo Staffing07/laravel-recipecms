@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 // tell the controller to use the recipe model that will fetch db data
 use App\Recipe;
-use App\Measurement;
 
 class RecipeController extends Controller
 {
@@ -42,7 +41,7 @@ class RecipeController extends Controller
 
     public function store(Request $request) {
 
-        if ($request->has('addrecipe')) {
+
             // return 'form1 was submitted';
             $recipe = new Recipe();
 
@@ -58,17 +57,9 @@ class RecipeController extends Controller
 
             $recipe->save();
             return redirect('/')->with('mssg', 'Successfully added recipe');
-        }
 
-        if ($request->has('addmeasure')) {
-            // return 'form2 was submitted';
 
-            $Measurement = new Measurement();
 
-            $Measurement->unit = request(('unitname'));
-            $Measurement->save();
-            return redirect('/')->with('mssg', 'Successfully added measurement');
-        }
 
 
 
@@ -97,21 +88,5 @@ class RecipeController extends Controller
         // return redirect('/')->with('mssg', 'Successfully added recipe');
     }
 
-    public function addmeasurement() {
-        return view('recipes.addmeasurement');
-    }
 
-    public function storemeasurement() {
-        // Check form is working by sending output to terminal in vs code
-        // error_log(request('name'));
-        // error_log(request('course'));
-        // error_log(request('cuisine'));
-        // error_log(request('description'));
-        // error_log(request('serves'));
-        // error_log(request('preptime'));
-        // error_log(request('cookingtime'));
-        // error_log(request('ingredients'));
-        // error_log(request('method'));
-
-    }
 }

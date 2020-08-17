@@ -17,17 +17,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// recipes
+
 Route::get('/recipes', 'RecipeController@index');
 
 Route::get('/recipes/create', 'RecipeController@create');
 
 Route::post('/recipes', 'RecipeController@store');
 
-Route::get('/recipes/addmeasurement', 'RecipeController@addmeasurement');
+Route::get('/recipes/{id}', 'RecipeController@show');
+
+// measurements
+
+Route::get('/measurements', 'MeasurementController@index');
+
+Route::get('/measurements/create', 'MeasurementController@create');
+
+Route::post('/measurements', 'MeasurementController@store');
 
 // Route::post('/recipes', 'RecipeController@storemeasurement');
 
-Route::get('/recipes/{id}', 'RecipeController@show');
+
 
 
 

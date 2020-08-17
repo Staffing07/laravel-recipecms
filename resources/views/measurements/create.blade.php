@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>Add measurement</h1>
-        <form action="/recipes" method="POST">
+        <form action="/measurements" method="POST">
             <!-- csrf required to allow cross site forgery protection else form will not work -->
             @csrf
            <!-- Not sure I need to capture this - can just deal with seeting amount increments in the view -->
