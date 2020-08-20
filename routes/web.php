@@ -13,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 // recipes
+
+Route::get('/', 'RecipeController@home');
 
 Route::get('/recipes', 'RecipeController@index');
 
@@ -25,7 +27,7 @@ Route::get('/recipes/create', 'RecipeController@create');
 
 Route::post('/recipes', 'RecipeController@store');
 
-Route::get('/recipes/{id}', 'RecipeController@show');
+Route::get('/recipes/{id}', 'RecipeController@show')->name('recipes.show');
 
 // measurements
 

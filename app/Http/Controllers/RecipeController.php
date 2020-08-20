@@ -9,6 +9,15 @@ use App\Recipe;
 
 class RecipeController extends Controller
 {
+    public function home()
+    {
+        // $recipe = Recipe::select('select * from recipes');
+        $recipe = Recipe::latest()->first();
+
+        return view('welcome', compact('recipe'));
+    }
+
+
     public function index()
     {
         // get data from database

@@ -1475,7 +1475,7 @@ table {
       border-top: 0; }
 
 /* Button */
-input[type="submit"],
+/*input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
@@ -1574,7 +1574,7 @@ button,
   .button.disabled,
   .button:disabled {
     pointer-events: none;
-    opacity: 0.25; }
+    opacity: 0.25; }*/
 
 /* Mini Posts */
 .mini-posts article {
@@ -2145,6 +2145,10 @@ button,
       -ms-object-position: center;
       object-position: center;
       width: 100%; }
+    #banner .pills {
+        width: 100%;
+        margin: 0 0 2em 0;
+    }
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
@@ -2177,6 +2181,9 @@ button,
         max-height: 50vh;
         min-height: 18em;
         width: 100%; } }
+        #banner .pills {
+            margin: 0 0 2em 0;
+        }
   @media screen and (orientation: portrait) and (max-width: 480px) {
     #banner .image {
       max-height: 35vh; } }
